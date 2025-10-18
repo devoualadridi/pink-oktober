@@ -87,4 +87,12 @@ toggle.addEventListener('click', () => {
   toggle.classList.toggle('active');
   nav.classList.toggle('active');
 });
+// JavaScript
+const menuBtn = document.querySelector(".menu");
+const navLinks = document.querySelector(".nav-links");
+
+menuBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+
 
