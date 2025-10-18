@@ -23,7 +23,7 @@ header {
   z-index: 1000;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-wrap: wrap;
   background: linear-gradient(135deg, #ffe4ec, #ffd6e8, #fff);
   padding: 12px 24px;
@@ -973,5 +973,6 @@ body[lang="en"] .menu-icon {
     box-shadow: 0 4px 20px rgba(0,0,0,0.2);
   }
 }
+
 
 
