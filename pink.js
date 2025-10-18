@@ -72,4 +72,11 @@ setInterval(showQuote, 10000);
 const observer = new MutationObserver(() => {
   showQuote();
 });
+
 observer.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
