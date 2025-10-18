@@ -900,6 +900,7 @@ body.dark #tips img.elegant {
   border: none;
   cursor: pointer;
   color: #e91e63;
+ order:2;
 }
 
 /* للهاتف فقط */
@@ -931,4 +932,19 @@ body.dark #tips img.elegant {
 .menu-toggle.active + .nav-links {
   display: flex;
 }
+
+/* للغة العربية */
+body[lang="ar"] nav {
+  order: -1; 
+  text-align: right;
+  direction: rtl;
+}
+
+/* للغة الإنجليزية */
+body[lang="en"] nav {
+  order: 1;/
+  text-align: left;
+  direction: ltr;
+}
+
 
