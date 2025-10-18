@@ -80,3 +80,11 @@ const navLinks = document.querySelector('.nav-links');
 menuToggle.addEventListener('click', () => {
   navLinks.classList.toggle('active');
 });
+const toggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.nav-links');
+
+toggle.addEventListener('click', () => {
+  toggle.classList.toggle('active');
+  nav.classList.toggle('active');
+});
+
