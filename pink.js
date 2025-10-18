@@ -1,9 +1,8 @@
 // 🔤 Language toggle
 (function(){
   const langBtn = document.getElementById('langBtn');
-  let lang = 'en'; // ✅ اللغة الافتراضية هي الإنجليزية
+  let lang = 'en'; // اللغة الافتراضية
 
-  // 🟢 دالة لتطبيق اللغة على كل العناصر
   function applyLanguage() {
     document.querySelectorAll('[data-en]').forEach(el=>{
       el.textContent = (lang === 'en') ? el.getAttribute('data-en') : el.getAttribute('data-ar');
@@ -13,24 +12,22 @@
     langBtn.textContent = (lang === 'en') ? 'Ar' : 'En';
   }
 
-  // ⚡ تطبيق اللغة الإنجليزية أول ما يفتح الموقع
   applyLanguage();
 
-  // 🔁 عند الضغط على الزر
   langBtn.addEventListener('click', () => {
     lang = (lang === 'en') ? 'ar' : 'en';
     applyLanguage();
   });
 })();
 
-// 🌙 تبديل الوضع الليلي
+// 🌙 Dark mode toggle
 const modeBtn = document.getElementById('modeBtn');
 modeBtn.addEventListener('click', () => {
   document.body.classList.toggle('dark');
   modeBtn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
 });
 
-// 💬 العبارات التحفيزية بلغتين
+// 💬 Motivational quotes
 const quotes = [
   { ar: "كل يوم هو فرصة جديدة للابتسامة 🌸", en: "Every day is a new opportunity to smile 🌸" },
   { ar: "القوة الحقيقية تكمن في الصبر والإيمان 💪", en: "True strength lies in patience and faith 💪" },
@@ -52,56 +49,33 @@ const quotes = [
 let currentIndex = 0;
 const quoteEl = document.getElementById("motivational-quote");
 
-// 🈯️ تحديد اللغة الحالية من <html>
 function getCurrentLang() {
-  return document.documentElement.lang || "en"; // ✅ الإنجليزية افتراضية الآن
+  return document.documentElement.lang || "en";
 }
 
-// 🎯 عرض العبارة حسب اللغة
 function showQuote() {
   const lang = getCurrentLang();
   quoteEl.textContent = quotes[currentIndex][lang];
   currentIndex = (currentIndex + 1) % quotes.length;
 }
 
-// ⏱️ تغيير العبارة كل 10 ثواني
 showQuote();
 setInterval(showQuote, 10000);
 
-// 🔁 تحديث العبارة عند تغيير اللغة
 const observer = new MutationObserver(() => {
   showQuote();
 });
-
 observer.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+
+// 🔁 Responsive menu toggle
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
 menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
   navLinks.classList.toggle('active');
 });
-const toggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.nav-links');
 
-toggle.addEventListener('click', () => {
-  toggle.classList.toggle('active');
-  nav.classList.toggle('active');
-});
-// JavaScript
-const menuBtn = document.querySelector(".menu");
-const navLinks = document.querySelector(".nav-links");
-
-menuBtn.addEventListener("click", () => {
-
-});
-// زر القائمة
-const menuBtn = document.querySelector(".menu");
-const navLinks = document.querySelector(".nav-links");
-
-menuBtn.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-  menuBtn.classList.toggle("active");
-});
 
 
 
