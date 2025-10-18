@@ -94,5 +94,14 @@ const navLinks = document.querySelector(".nav-links");
 menuBtn.addEventListener("click", () => {
   navLinks.classList.toggle("show");
 });
+// زر القائمة
+const menuBtn = document.querySelector(".menu");
+const navLinks = document.querySelector(".nav-links");
+
+menuBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  menuBtn.classList.toggle("active");
+});
+
 
 
