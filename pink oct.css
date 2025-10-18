@@ -976,6 +976,14 @@ body[lang="en"] .menu-icon {
 .nav-links.show{
  display:flex;}
 
+.nav-links {
+  display: none; /* افتراضياً مخفية */
+}
+
+.nav-links.active {
+  display: flex; /* أو block حسب التصميم */
+  flex-direction: column; /* اذا القائمة عمودية على الموبايل */
+}
 
 
 
