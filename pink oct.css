@@ -973,18 +973,6 @@ body[lang="en"] .menu-icon {
     box-shadow: 0 4px 20px rgba(0,0,0,0.2);
   }
 }
-.nav-links.show{
- display:flex;}
-
-.nav-links {
-  display: none; /* افتراضياً مخفية */
-}
-
-.nav-links.active {
-  display: flex; /* أو block حسب التصميم */
-  flex-direction: column; /* اذا القائمة عمودية على الموبايل */
-}
-
 
 
 
