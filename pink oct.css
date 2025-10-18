@@ -973,6 +973,9 @@ body[lang="en"] .menu-icon {
     box-shadow: 0 4px 20px rgba(0,0,0,0.2);
   }
 }
+.nav-links.show{
+ display:flex;}
+
 
 
 
