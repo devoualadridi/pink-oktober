@@ -933,18 +933,45 @@ body.dark #tips img.elegant {
   display: flex;
 }
 
+
+.menu-icon {
+  display: none; /* تظهر فقط في الهاتف */
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 /* للغة العربية */
-body[lang="ar"] nav {
-  order: -1; 
-  text-align: right;
-  direction: rtl;
+body[lang="ar"] .menu-icon {
+  order: 1; /* تظهر بعد الشعار على اليمين */
 }
 
 /* للغة الإنجليزية */
-body[lang="en"] nav {
-  order: 1;/
-  text-align: left;
-  direction: ltr;
+body[lang="en"] .menu-icon {
+  order: 1; /* تظهر بعد الشعار على اليسار */
+}
+
+/* 📱 تجاوب الهاتف */
+@media (max-width: 850px) {
+  .menu-icon {
+    display: block; /* تظهر أيقونة menu فقط في الهاتف */
+  }
+
+  nav {
+    display: none; /* تختفي القائمة على الهاتف */
+  }
+
+  nav.active {
+    display: flex; 
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    background: var(--bg-light);
+    width: 100%;
+    right: 0;
+    left: 0;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  }
 }
 
 
