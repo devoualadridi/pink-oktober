@@ -17,21 +17,26 @@
       transition: background 0.4s, color 0.4s;
       overflow-x: hidden;
     }
-    /*  HEADER */
 header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  background: linear-gradient(135deg, #ffe4ec, #ffd6e8, #fff);
-  padding: 12px 24px;
-  box-shadow: 0 2px 15px rgba(255, 182, 193, 0.25);
-  backdrop-filter: blur(10px);
-  border-bottom: 2px solid rgba(255, 182, 193, 0.3);
-  transition: background 0.4s ease, box-shadow 0.4s ease;
+  justify-content: space-between;
+  padding: 15px 40px;
+}
+
+.logo {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px; /* المسافة بين Home وبقية العناصر */
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
 }
 
 /*  الشعار */
@@ -973,6 +978,7 @@ body[lang="en"] .menu-icon {
 }
   
   
+
 
 
 
