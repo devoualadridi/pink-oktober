@@ -22,6 +22,15 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 15px 40px;
+  background-color: #fff;
+}
+
+.menu-toggle {
+  font-size: 1.5em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 15px; /* فراغ بسيط بين الزر والشعار */
 }
 
 .logo {
@@ -31,11 +40,12 @@ header {
 
 .nav-links {
   display: flex;
-  gap: 30px; /* المسافة بين Home وبقية العناصر */
+  gap: 30px;
 }
 
 .controls {
   display: flex;
+  align-items: center;
   gap: 10px;
 }
 
@@ -978,6 +988,7 @@ body[lang="en"] .menu-icon {
 }
   
   
+
 
 
 
